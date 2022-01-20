@@ -6,17 +6,17 @@ export default {
         (process.env.NODE_ENV === 'development' ? '//localhost:9200' : '/'),
 
     maxImageSize: process.env.MaxImageSize
-        ? parseInt(process.env.MaxImageSize, 10000)
-        : MB * 5000,
+        ? parseInt(process.env.MaxImageSize, 10)
+        : MB * 102400,
     maxBackgroundImageSize: process.env.MaxBackgroundImageSize
-        ? parseInt(process.env.MaxBackgroundImageSize, 10000)
-        : MB * 5000,
+        ? parseInt(process.env.MaxBackgroundImageSize, 10)
+        : MB * 1024,
     maxAvatarSize: process.env.MaxAvatarSize
-        ? parseInt(process.env.MaxAvatarSize, 10000)
-        : MB * 1000.5,
+        ? parseInt(process.env.MaxAvatarSize, 10)
+        : MB * 1024,
     maxFileSize: process.env.MaxFileSize
-        ? parseInt(process.env.MaxFileSize, 99999999)
-        : MB * 99999999,
+        ? parseInt(process.env.MaxFileSize, 10)
+        : MB * 102400,
 
     // client default system setting
     defaultTheme: process.env.DefaultTheme || 'cool',
